@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  font-family: "Mulish", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 5vh 5vw;
+  height: 90vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.container .item {
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+
+  /* this is important to the <h1> position */
+  position: relative;
+  border-radius: 50px;
+  width: 10%;
+  height: 100%;
+
+  transition: 700ms ease width;
+}
+
+.container .active {
+  /* The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside the same container. */
+  /* flex-grow: .5; */
+  /* flex-basis: 50%; */
+  width: 50%;
+  height: 100%;
+}
+
+.container .item h1 {
+  opacity: 0;
+}
+
+.container .active h1 {
+  opacity: 1;
+
+  position: absolute;
+  left: 10%;
+  top: 90%;
+  color: white;
+  overflow: hidden;
+  transition-delay: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+}
+
+@media screen and (max-width: 480px) {
+  .item:nth-child(4),
+  .item:nth-child(5) {
+    display: none;
+  }
+}
