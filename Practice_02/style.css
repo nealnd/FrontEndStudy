@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.container p {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  font-size: 23px;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 3px;
+  border-color: rgb(224, 224, 224);
+  justify-content: center;
+  align-content: center;
+  transition-property: border-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+p.active {
+  border-color: rgb(52, 152, 219);
+}
+
+.container .bar {
+  position: relative;
+  width: 120px;
+  height: 5px;
+  background-color: rgb(224, 224, 224);
+}
+
+.container .bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 5px;
+  background-color: rgb(52, 152, 219);
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.container .bar.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 5px;
+  background-color: rgb(52, 152, 219);
+  /* animation: barlength 0.3s ease forwards; */
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.bottons button {
+  width: 110px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgb(224, 224, 224);
+  border-style: hidden;
+}
+
+.bottons .active {
+  background-color: rgb(52, 152, 219);
+}
