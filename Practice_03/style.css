@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  font-family: "Lato", sans-serif;
+  color: #222;
+  overflow-x: hidden;
+}
+
+.circle {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  z-index: 100;
+}
+
+.circle .container {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+  transform: rotate(-90deg);
+}
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+section {
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+section.show-nav {
+  transform: rotate(-20deg);
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 90%;
+}
+
+.article h1 {
+  margin: 0;
+  margin-top: 100px;
+}
+.article p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.menu {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+.menu ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-200%);
+  transition: transform 0.4s ease-in;
+}
+
+.menu ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.menu ul li + li {
+  margin-left: 15px;
+  transform: translateX(-200%);
+}
+
+.menu ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.menu a:hover {
+  color: #de1212;
+  font-weight: bold;
+}
+
+section.show-nav + .menu ul li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
