@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+
+:root {
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  text-wrap: nowrap;
+  min-width: 200px;
+}
+
+.container {
+  height: 300px;
+  width: 120px;
+  background-color: blue;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.remained {
+  background-color: white;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drinked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 160px;
+  margin: auto;
+}
+.unit {
+  height: 100px;
+  width: 40px;
+  background-color: white;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+}
+
+.unit.active {
+  background-color: blue;
+}
