@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/Practice_31/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Password Generator</h2>
+        <div class="result">
+            <p class="password"></p><button class="copied"><i class="far fa-clipboard"></i></button>
+        </div>
+        <form action="">
+            <div>
+                <label for="length">Password Length</label>
+                <input type="number" name="length" id="length" min="4" max="20" value="20">
+            </div>
+            <div>
+                <label for="upletter">Include uppercase letters</label>
+                <input type="checkbox" name="upletter" id="upletter" checked>
+            </div>
+            <div>
+                <label for="loletter">Include lowercase letters</label>
+                <input type="checkbox" name="loletter" id="loletter" checked>
+            </div>
+
+            <div><label for="number">Include numbers</label>
+                <input type="checkbox" name="number" id="number" checked>
+            </div>
+
+            <div><label for="symbols">Include symbols</label>
+                <input type="checkbox" name="symbols" id="symbols" checked>
+            </div>
+
+        </form>
+        <button id="generate">
+            Generate Password
+        </button>
+    </div>
+
+    <script src="/Practice_31/script.js"></script>
+</body>
+
+</html>
