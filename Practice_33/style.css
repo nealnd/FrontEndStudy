@@ -56,6 +56,10 @@ body {
   padding: 40px 20px;
 }
 
+.content.readonly {
+  pointer-events: none;
+}
+
 .add {
   position: fixed;
   right: 15px;

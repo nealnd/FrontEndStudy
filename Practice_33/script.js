@@ -34,7 +34,8 @@ function addNewNote(text = '') {
     })
 
     editBtn.addEventListener('click', () => {
-        noteE.classList.toggle('hidden');
+        updateLS();
+        contentArea.classList.toggle('readonly');
     })
 
     deleteBtn.addEventListener('click', () => {
