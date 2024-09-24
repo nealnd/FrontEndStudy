@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,6 +7,7 @@
 }
 
 body {
+  font-family: "Muli", sans-serif;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -13,12 +16,17 @@ body {
   overflow: hidden;
 }
 
+.logo {
+  width: 100px;
+}
+
 .menu {
   position: fixed;
   top: 20px;
   left: 20px;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .menu img {
@@ -35,14 +43,24 @@ nav {
   width: 60%;
   max-width: 480px;
   min-width: 320px;
-  /* transition-delay: 0.4s; */
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+}
+
+nav.active {
+  transform: translateX(0);
 }
 
 .rednav {
   background-color: rgb(229, 9, 20);
   width: 95%;
   height: 100vh;
-  /* transition-delay: 0.2s; */
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+}
+
+.rednav.active {
+  transform: translateX(0);
 }
 
 .whitenav {
@@ -51,8 +69,13 @@ nav {
   height: 100vh;
   padding: 40px;
   position: relative;
+  transform: translateX(-100%);
+  transition: 0.3s ease;
 }
 
+.whitenav.active {
+  transform: translateX(0);
+}
 .whitenav img {
   width: 80px;
 }
@@ -63,9 +86,34 @@ nav {
   top: 60px;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .whitenav button img {
   width: 30px;
   height: 30px;
+}
+
+.whitenav ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin: 20px 0;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+li a {
+  color: rgb(34, 31, 31);
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+li ul {
+  list-style-type: none;
+  padding-left: 20px;
 }
