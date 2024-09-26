@@ -5,8 +5,8 @@ const addnote = document.querySelector('.add');
 
 const notes = JSON.parse(localStorage.getItem('notes'))
 
-if (notes) {
-    notes.forEach(note => addNewNote(note))
+if (lists) {
+    lists.forEach(note => addNewNote(note))
 }
 
 function addNewNote(text = '') {
