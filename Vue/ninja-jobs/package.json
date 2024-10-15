@@ -1,5 +1,5 @@
 {
-  "name": "web-form",
+  "name": "ninja-jobs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,11 +8,14 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "json-server": "^1.0.0-beta.3",
+    "ninja-jobs": "file:",
     "vue": "^3.2.13",
-    "web-form": "file:"
+    "vue-router": "^4.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0"
   }
 }
