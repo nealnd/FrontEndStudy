@@ -1,16 +1,15 @@
 <script setup>
+
+import Layout from '@/views/Layout/index.vue'
+
 </script>
+
+
 
 <template>
-
-<HeaderTop></HeaderTop>
-
+   <RouterView></RouterView>
 </template>
 
-<script setup>
-import HeaderTop from '../src/components/HeaderTop.vue'
-</script>
 
-<style scoped>
 
-</style>
+<style scoped lang="scss"></style>

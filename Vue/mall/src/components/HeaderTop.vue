@@ -1,5 +1,8 @@
 <template>
     <header id="head_top">
+    <slot name="left"></slot>
+    <slot name="mid"></slot>
+    <slot name="right"></slot>
     </header>
 </template>
 
